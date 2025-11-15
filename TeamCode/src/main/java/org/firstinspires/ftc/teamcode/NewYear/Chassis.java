@@ -3,6 +3,13 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+/**
+ * Description of Chassis.
+ *
+ * @author Dennis O'Brien
+ * @version 1.0
+ * @date 11/13/2025
+ */
 public class Chassis {
     public DcMotor frontLeftDrive, frontRightDrive, backLeftDrive, backRightDrive;
 
@@ -65,10 +72,16 @@ public class Chassis {
         backRightDrive.setPower(maxSpeed * (backRightPower / maxPower));
     }
 
+    /**
+     * @param power Power of the motors (Default: 1.0)
+     */
     public void setMaxPower( double power) {
         maxPower = power;
     }
 
+    /**
+     * @param speed Speed of the motors (Lower values are good for outreach)
+     */
     public void setMaxSpeed( double speed) {  // make this slower for outreaches
         maxSpeed = speed;
     }

@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.OpModes;
+package org.firstinspires.ftc.teamcode.Utilities;
 
 import android.annotation.SuppressLint;
 
@@ -6,13 +6,21 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
 
+/**
+ * Description of ServoTester.
+ *
+ * @author Dennis O'Brien
+ * @version 1.0
+ * @date 11/13/2025
+ */
 @TeleOp(name = "ServoTester", group="Demo")
 public class ServoTester extends OpMode {
 
-    String DEVICE_NAME = "servo";
+    String DEVICE_NAME = "shooterHinge";
 
     Servo   servo;
     double  position = 0.5;
+    double increment = 0.05;
 
     @Override
     public void init() {
@@ -22,14 +30,14 @@ public class ServoTester extends OpMode {
     @SuppressLint("DefaultLocale")
     public void init_loop() {
         if (gamepad1.dpadUpWasReleased()) {
-            position += 0.1;
+            position += increment;
         }
 
         if (gamepad1.dpadDownWasReleased()) {
-            position -= 0.1;
+            position -= increment;
         }
 
-        telemetry.addLine(String.format("Servo starts at %.1f", position));
+        telemetry.addLine(String.format("Servo starts at %.2f", position));
         telemetry.addLine("DPad Up: Increases servo start position");
         telemetry.addLine("DPad Down: Decreases servo start position");
         telemetry.update();
@@ -39,20 +47,21 @@ public class ServoTester extends OpMode {
         servo.setPosition(position);
     }
 
+    @SuppressLint("DefaultLocale")
     public void loop() {
-        telemetry.addLine("DPad Left: Move servo down");
-        telemetry.addLine("DPad Right: Move servo up");
-        telemetry.addData("Servo Position", "%.1f", position);
+        telemetry.addLine(String.format("DPad Left: Move servo down by %.2f",increment));
+        telemetry.addLine(String.format("DPad Left: Move servo up by %.2f",increment));
+        telemetry.addData("Servo Position", "%.2f", position);
         telemetry.update();
 
         if (gamepad1.dpadLeftWasReleased()) {
-            position -= 0.1;
+            position -= increment;
             position = Math.max(0., position);
             servo.setPosition(position);
         }
 
         if (gamepad1.dpadRightWasReleased()) {
-            position += 0.1;
+            position += increment;
             position = Math.min(1., position);
             servo.setPosition(position);
         }

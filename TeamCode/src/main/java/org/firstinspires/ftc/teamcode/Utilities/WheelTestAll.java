@@ -1,48 +1,35 @@
 package org.firstinspires.ftc.teamcode.Utilities;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 /**
- * Description of WheelTest.
+ * Description of WheelTestAll.
  *
  * @author Phil Pettis
- * @version 1.0
  * @date 9/1/2025
  */
-@Disabled
-@Autonomous(name = "Wheel Test", group="Android")
-public class WheelTest extends LinearOpMode {
-
-    // Motor declarations
-    private DcMotor leftBack = null;
-    private DcMotor rightBack = null;
-    private DcMotor leftFront = null;
-    private DcMotor rightFront = null;
+@Autonomous(name = "Wheel Test All", group="Util")
+public class WheelTestAll extends LinearOpMode {
 
     @Override
     public void runOpMode() {
-        // Initialize motors
-        leftBack = hardwareMap.get(DcMotor.class, "leftBack");
-        rightBack = hardwareMap.get(DcMotor.class, "rightBack");
-        leftFront = hardwareMap.get(DcMotor.class, "leftFront");
-        rightFront = hardwareMap.get(DcMotor.class, "rightFront");
+        DcMotor leftBack = hardwareMap.get(DcMotor.class, "leftBack");
+        DcMotor rightBack = hardwareMap.get(DcMotor.class, "rightBack");
+        DcMotor leftFront = hardwareMap.get(DcMotor.class, "leftFront");
+        DcMotor rightFront = hardwareMap.get(DcMotor.class, "rightFront");
 
-        // Set motor directions (adjust these based on your robot's configuration)
         leftBack.setDirection(DcMotor.Direction.REVERSE);
         rightBack.setDirection(DcMotor.Direction.FORWARD);
         leftFront.setDirection(DcMotor.Direction.REVERSE);
         rightFront.setDirection(DcMotor.Direction.FORWARD);
 
-        // Set all motors to brake when power is zero
         leftBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rightBack.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         leftFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         rightFront.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
-        // Wait for start button
         telemetry.addData("Status", "Ready to test wheels");
         telemetry.addData("Info", "Each wheel will spin forward 2s, then backward 2s");
         telemetry.update();

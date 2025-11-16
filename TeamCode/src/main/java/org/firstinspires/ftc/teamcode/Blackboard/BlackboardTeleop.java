@@ -7,7 +7,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
  * Description of BlackboardTeleop.
  *
  * @author Edson James
- * @version 1.0
  * @date 11/14/2025
  */
 @TeleOp(name="BlackboardTeleop", group="Blackboard")

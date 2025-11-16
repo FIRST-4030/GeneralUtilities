@@ -7,7 +7,6 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
  * Description of BlackboardAuto.
  *
  * @author Edson James
- * @version 1.0
  * @date 11/14/2025
  */
 @Autonomous(name="BlackboardAuto", group="Blackboard")

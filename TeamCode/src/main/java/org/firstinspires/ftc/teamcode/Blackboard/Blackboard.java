@@ -4,7 +4,6 @@ package org.firstinspires.ftc.teamcode.Blackboard;
  * Description of Blackboard.
  *
  * @author Edson James
- * @version 1.0
  * @date 11/14/2025
  */
 public class Blackboard {

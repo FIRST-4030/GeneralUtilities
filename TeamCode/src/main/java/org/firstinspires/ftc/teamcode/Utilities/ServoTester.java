@@ -10,10 +10,9 @@ import com.qualcomm.robotcore.hardware.Servo;
  * Description of ServoTester.
  *
  * @author Dennis O'Brien
- * @version 1.0
  * @date 11/13/2025
  */
-@TeleOp(name = "ServoTester", group="Demo")
+@TeleOp(name = "ServoTester", group="Util")
 public class ServoTester extends OpMode {
 
     String DEVICE_NAME = "shooterHinge";

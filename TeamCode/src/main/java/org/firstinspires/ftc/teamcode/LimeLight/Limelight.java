@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.LimeLight;
 
 import com.qualcomm.hardware.limelightvision.LLResult;
 import com.qualcomm.hardware.limelightvision.Limelight3A;
@@ -42,6 +42,7 @@ public class Limelight {
             telemetry.addData("Limelight", "No Targets");
         }
     }
+
     public void setTeam(int id) {
         if (id == 24) {
             limelight.pipelineSwitch(0);

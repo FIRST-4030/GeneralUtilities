@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
  * @author Edson James
  * @date 11/14/2025
  */
-@TeleOp(name="BlackboardTeleop", group="Blackboard")
+@TeleOp(name="BlackboardTeleop", group="Demo")
 public class BlackboardTeleop extends OpMode
 {
     @Override

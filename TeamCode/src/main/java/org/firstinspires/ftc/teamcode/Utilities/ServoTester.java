@@ -15,7 +15,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 @TeleOp(name = "ServoTester", group="Util")
 public class ServoTester extends OpMode {
 
-    String DEVICE_NAME = "shooterHinge";
+    String DEVICE_NAME = "liftServo";
 
     Servo   servo;
     double  position = 0.5;
@@ -49,7 +49,7 @@ public class ServoTester extends OpMode {
     @SuppressLint("DefaultLocale")
     public void loop() {
         telemetry.addLine(String.format("DPad Left: Move servo down by %.2f",increment));
-        telemetry.addLine(String.format("DPad Left: Move servo up by %.2f",increment));
+        telemetry.addLine(String.format("DPad Right: Move servo up by %.2f",increment));
         telemetry.addData("Servo Position", "%.2f", position);
         telemetry.update();
 

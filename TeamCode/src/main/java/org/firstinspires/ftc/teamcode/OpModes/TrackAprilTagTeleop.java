@@ -82,6 +82,8 @@ public class TrackAprilTagTeleop extends OpMode
 
         // Report current field info
         telemetry.addLine(String.format("Target in view: %b",targetInView));
+        telemetry.addLine(String.format("Current bearing: %5.2f",imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.DEGREES)));
+
         if (targetInView) {
             telemetry.addLine(String.format("April Tag Bearing: %5.2f", aprilTags.getBearing()));
         }

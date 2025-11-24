@@ -63,7 +63,6 @@ public class RotateTeleop extends OpMode
     @Override
     public void start() {
         imu.resetYaw();
-        current = imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.DEGREES);
     }
 
     /*
@@ -72,8 +71,9 @@ public class RotateTeleop extends OpMode
     @SuppressLint("DefaultLocale")
     @Override
     public void loop() {
+        current = imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.DEGREES);
+        telemetry.addLine(String.format("Current: %5.1f\n",current));
         if (!moveIt) {
-            telemetry.addLine(String.format("Current: %5.1f\n",current));
             telemetry.addLine(String.format("Y: angle = %5.1f",yButton));
             telemetry.addLine(String.format("X: angle = %5.1f",xButton));
             telemetry.addLine(String.format("A: angle = %5.1f",aButton));

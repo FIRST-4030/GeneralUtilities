@@ -38,3 +38,20 @@ name of the servo (<b>DEVICE_NAME</b>) at the top of the file before beginning
 This opmode will drive each individual wheel forward for 2 seconds and then 
 in reverse for 2 seconds. This is a great tool to ensure that you have wired up
 the motors to the proper pors on the ControlHub.
+
+### Datalogger 
+Datalogger class. Most users will not need to edit this class; its methods are called 
+from a user's OpMode.  For instructions, see the tutorial at the FTC Wiki:
+https://github.com/FIRST-Tech-Challenge/FtcRobotController/wiki/Datalogging
+
+### PID controller
+Proportional, Integral, Derivative Controller Class
+
+### Piecewise curves
+PiecewiseFunction class provides a piecewise math function connecting the dots between an arbitrary number of points. 
+Various options include support for step functions, the ability to chose between high and low defaults, and limiting of inputs.
+
+### Running Average
+Running Average Class. Uses a fixed-size queue (circular buffer) to store the last n numbers.
+When a new number is added and the queue is full, the oldest number is removed.
+This way, you always maintain the last n numbers for your average calculation.

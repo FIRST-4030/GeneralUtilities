@@ -6,12 +6,6 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.Servo;
 
-/**
- * Description of ServoTester.
- *
- * @author Dennis O'Brien
- * @date 11/13/2025
- */
 @TeleOp(name = "ServoTester", group="Util")
 public class ServoTester extends OpMode {
 

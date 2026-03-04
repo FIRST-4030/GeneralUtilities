@@ -36,7 +36,7 @@ public class ControlHub {
         return fileName;
     }
 
-    public void intitializeControlHub(String type) throws IOException {
+    public void initializeControlHub(String type) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             writer.write(type);
         }

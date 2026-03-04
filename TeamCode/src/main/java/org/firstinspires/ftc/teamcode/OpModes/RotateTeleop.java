@@ -10,12 +10,6 @@ import com.qualcomm.robotcore.hardware.IMU;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.teamcode.NewYear.Chassis;
 
-/**
- * Description of BasicTeleop.
- *
- * @author Dennis O'Brien
- * @date 11/21/2025
- */
 @TeleOp(name="RotateTeleop", group="Demo")
 public class RotateTeleop extends OpMode
 {

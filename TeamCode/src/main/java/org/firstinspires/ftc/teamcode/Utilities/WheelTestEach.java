@@ -4,12 +4,6 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-/**
- * Description of WheelTestEach.
- *
- * @author Dennis O'Brien
- * @date 11/15/2025
- */
 @TeleOp(name="Wheel Test Each", group="Util")
 public class WheelTestEach extends OpMode
 {

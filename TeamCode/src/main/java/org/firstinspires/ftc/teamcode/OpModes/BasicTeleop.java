@@ -5,12 +5,6 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.NewYear.Chassis;
 
-/**
- * Description of BasicTeleop.
- *
- * @author Dennis O'Brien
- * @date 11/17/2025
- */
 @TeleOp(name="BasicTeleop", group="Demo")
 public class BasicTeleop extends OpMode
 {

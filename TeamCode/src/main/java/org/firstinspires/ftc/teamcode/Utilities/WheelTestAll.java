@@ -4,12 +4,6 @@ import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-/**
- * Description of WheelTestAll.
- *
- * @author Phil Pettis
- * @date 9/1/2025
- */
 @Autonomous(name = "Wheel Test All", group="Util")
 public class WheelTestAll extends LinearOpMode {
 

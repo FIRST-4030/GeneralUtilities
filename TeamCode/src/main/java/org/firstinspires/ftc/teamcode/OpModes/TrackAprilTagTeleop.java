@@ -12,12 +12,6 @@ import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.teamcode.AprilTag;
 import org.firstinspires.ftc.teamcode.NewYear.Chassis;
 
-/**
- * Description of TrackAprilTagTeleop.
- *
- * @author Dennis O'Brien
- * @date 11/22/2025
- */
 @TeleOp(name="TrackAprilTagTeleop", group="Demo")
 public class TrackAprilTagTeleop extends OpMode
 {

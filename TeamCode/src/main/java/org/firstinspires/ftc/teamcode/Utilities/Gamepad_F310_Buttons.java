@@ -5,12 +5,6 @@ import android.annotation.SuppressLint;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-/**
- * Description of Gamepad_F310_Buttons.
- *
- * @author Dennis O'Brien
- * @date 10/1/2025
- */
 @TeleOp(name="Gamepad F310 Buttons", group="Util")
 public class Gamepad_F310_Buttons extends OpMode
 {

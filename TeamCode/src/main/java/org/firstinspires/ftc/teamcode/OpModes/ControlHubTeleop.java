@@ -66,7 +66,7 @@ public class ControlHubTeleop extends OpMode {
 
         } else if (gamepad1.leftBumperWasReleased()) {
             try {
-                controlHub.intitializeControlHub(controlHubs[0]);
+                controlHub.initializeControlHub(controlHubs[0]);
                 operation = "ControlHub=" + controlHub.getControlHub();
 
             } catch (IOException e) {
@@ -75,7 +75,7 @@ public class ControlHubTeleop extends OpMode {
 
         } else if (gamepad1.rightBumperWasReleased()) {
             try {
-                controlHub.intitializeControlHub(controlHubs[1]);
+                controlHub.initializeControlHub(controlHubs[1]);
                 operation = "ControlHub=" + controlHub.getControlHub();
             } catch (IOException e) {
                 throw new RuntimeException(e);

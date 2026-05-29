@@ -14,7 +14,7 @@ public class Chassis {
         maxPower = 1.0;
         maxSpeed = 1.0;
 
-        frontLeftDrive = hardwareMap.get(DcMotor .class, "leftFront");
+        frontLeftDrive = hardwareMap.get(DcMotor.class, "leftFront");
         frontRightDrive = hardwareMap.get(DcMotor.class, "rightFront");
         backLeftDrive = hardwareMap.get(DcMotor.class, "leftBack");
         backRightDrive = hardwareMap.get(DcMotor.class, "rightBack");

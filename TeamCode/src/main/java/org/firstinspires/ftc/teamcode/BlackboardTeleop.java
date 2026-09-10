@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.Blackboard;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -15,7 +15,7 @@ public class BlackboardTeleop extends OpMode
     @Override
     public void init() {
         telemetry.addData("Status", "Initialized");
-        telemetry.addData("Alliance", Blackboard.getAllianceAsString());
+//        telemetry.addData("Alliance", Blackboard.getAllianceAsString());
     }
 
     /*
@@ -24,16 +24,17 @@ public class BlackboardTeleop extends OpMode
     @Override
     public void init_loop() {
         telemetry.addData("Status", "Initialized");
-        telemetry.addData("Alliance", Blackboard.getAllianceAsString());
-        telemetry.addLine("HOLD RB AND Press X to override alliance to BLUE");
-        telemetry.addLine("HOLD RB AND Press B to override alliance to RED");
+        Blackboard.initLoopProcess(telemetry, gamepad1);
+//        telemetry.addData("Alliance", Blackboard.getAllianceAsString());
+//        telemetry.addLine("HOLD RB AND Press X to override alliance to BLUE");
+//        telemetry.addLine("HOLD RB AND Press B to override alliance to RED");
         telemetry.update();
 
-        if (gamepad1.xWasPressed() && gamepad1.right_bumper) {
-            Blackboard.alliance = Blackboard.Alliance.BLUE;
-        } else if (gamepad1.bWasPressed() && gamepad1.right_bumper) {
-            Blackboard.alliance = Blackboard.Alliance.RED;
-        }
+//        if (gamepad1.xWasPressed() && gamepad1.right_bumper) {
+//            Blackboard.alliance = Blackboard.Alliance.BLUE;
+//        } else if (gamepad1.bWasPressed() && gamepad1.right_bumper) {
+//            Blackboard.alliance = Blackboard.Alliance.RED;
+//        }
     }
 
     /*

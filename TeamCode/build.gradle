@@ -46,5 +46,5 @@ dependencies {
     implementation project(':FtcRobotController')
 
     // Specify which version of the library you're using here
-    implementation 'com.github.FIRST-4030:GeneralUtilitiesLibrary:1.0.5'
+    implementation 'com.github.FIRST-4030:GeneralUtilitiesLibrary:1.0.6'
 }
